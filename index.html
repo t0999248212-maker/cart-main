@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A small catalog of handcrafted desserts.">
+  <title>Crumb & Berry | Desserts</title>
+  <link rel="icon" type="image/png" href="images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="page-shell">
+    <section class="catalog" aria-labelledby="page-title">
+      <header class="catalog-header">
+        <p class="eyebrow">Today’s selection</p>
+        <h1 id="page-title">Desserts</h1>
+      </header>
+      <section id="product-grid" class="product-grid" aria-label="Dessert products"></section>
+    </section>
+
+    <aside class="cart-panel" aria-labelledby="cart-title">
+      <h2 id="cart-title">Your Cart <span id="cart-count">(0)</span></h2>
+      <div id="empty-cart" class="empty-cart">
+        <img class="empty-cart-image" src="images/illustration-empty-cart.svg" alt="">
+        <p>Your added items<br>will appear here</p>
+      </div>
+      <div id="selected-cart" class="selected-cart" hidden>
+        <div id="cart-items" class="cart-items"></div>
+        <div class="cart-total"><span>Order total</span><strong id="order-total">$0.00</strong></div>
+        <p class="carbon-note"><img src="images/icon-carbon-neutral.svg" alt=""> This is a <strong>carbon-neutral</strong> delivery</p>
+        <button id="confirm-order" class="primary-button" type="button">Confirm Order</button>
+      </div>
+    </aside>
+  </main>
+
+  <dialog id="order-dialog" class="order-dialog" aria-labelledby="confirmation-title">
+    <img class="confirmation-icon" src="images/icon-order-confirmed.svg" alt="">
+    <h2 id="confirmation-title">Order Confirmed</h2>
+    <p class="confirmation-subtitle">We hope you enjoy your food!</p>
+    <div id="confirmation-items" class="confirmation-items"></div>
+    <div class="confirmation-total"><span>Order total</span><strong id="confirmation-total">$0.00</strong></div>
+    <button id="new-order" class="primary-button" type="button">Start New Order</button>
+  </dialog>
+  <script id="product-data" type="application/json">
+    [
+      {"name":"Waffle with Berries","category":"Waffle","price":6.5,"image":{"thumbnail":"images/image-waffle-thumbnail.jpg","mobile":"images/image-waffle-mobile.jpg","tablet":"images/image-waffle-tablet.jpg","desktop":"images/image-waffle-desktop.jpg"}},
+      {"name":"Vanilla Bean Creme Brulee","category":"Creme Brulee","price":7,"image":{"thumbnail":"images/image-creme-brulee-thumbnail.jpg","mobile":"images/image-creme-brulee-mobile.jpg","tablet":"images/image-creme-brulee-tablet.jpg","desktop":"images/image-creme-brulee-desktop.jpg"}},
+      {"name":"Macaron Mix of Five","category":"Macaron","price":8,"image":{"thumbnail":"images/image-macaron-thumbnail.jpg","mobile":"images/image-macaron-mobile.jpg","tablet":"images/image-macaron-tablet.jpg","desktop":"images/image-macaron-desktop.jpg"}},
+      {"name":"Classic Tiramisu","category":"Tiramisu","price":5.5,"image":{"thumbnail":"images/image-tiramisu-thumbnail.jpg","mobile":"images/image-tiramisu-mobile.jpg","tablet":"images/image-tiramisu-tablet.jpg","desktop":"images/image-tiramisu-desktop.jpg"}},
+      {"name":"Pistachio Baklava","category":"Baklava","price":4,"image":{"thumbnail":"images/image-baklava-thumbnail.jpg","mobile":"images/image-baklava-mobile.jpg","tablet":"images/image-baklava-tablet.jpg","desktop":"images/image-baklava-desktop.jpg"}},
+      {"name":"Lemon Meringue Pie","category":"Pie","price":5,"image":{"thumbnail":"images/image-meringue-thumbnail.jpg","mobile":"images/image-meringue-mobile.jpg","tablet":"images/image-meringue-tablet.jpg","desktop":"images/image-meringue-desktop.jpg"}},
+      {"name":"Red Velvet Cake","category":"Cake","price":4.5,"image":{"thumbnail":"images/image-cake-thumbnail.jpg","mobile":"images/image-cake-mobile.jpg","tablet":"images/image-cake-tablet.jpg","desktop":"images/image-cake-desktop.jpg"}},
+      {"name":"Salted Caramel Brownie","category":"Brownie","price":4.5,"image":{"thumbnail":"images/image-brownie-thumbnail.jpg","mobile":"images/image-brownie-mobile.jpg","tablet":"images/image-brownie-tablet.jpg","desktop":"images/image-brownie-desktop.jpg"}},
+      {"name":"Vanilla Panna Cotta","category":"Panna Cotta","price":6.5,"image":{"thumbnail":"images/image-panna-cotta-thumbnail.jpg","mobile":"images/image-panna-cotta-mobile.jpg","tablet":"images/image-panna-cotta-tablet.jpg","desktop":"images/image-panna-cotta-desktop.jpg"}}
+    ]
+  </script>
+  <script src="script.js"></script>
+</body>
+</html>
